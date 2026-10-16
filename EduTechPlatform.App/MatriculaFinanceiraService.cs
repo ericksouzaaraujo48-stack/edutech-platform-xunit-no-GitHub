@@ -23,6 +23,16 @@ namespace EduTechPlatform.App
             }
         }
 
-        
+        public bool PodeRealizarRematricula(bool possuiPendenciaFinanceira, string situacaoAcademica)
+        {
+            if(possuiPendenciaFinanceira == false && situacaoAcademica == "APROVADO")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
