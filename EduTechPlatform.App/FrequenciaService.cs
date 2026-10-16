@@ -12,7 +12,18 @@ namespace EduTechPlatform.App
             int percentualPresenca = ((aulasTotais - faltas) /(double)aulasTotais) * 100;
             return percentualPresenca;
         }
-        
+        public bool AprovadoPorFrequencia(int aulasTotais, int faltas)
+        {
+            int percentual = CalcularPorcentagemPresenca(aulasTotais, faltas);
+            if(percentual >= 75)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
 
